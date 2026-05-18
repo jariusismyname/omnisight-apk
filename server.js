@@ -1,6 +1,11 @@
+const dns = require('dns');
+dns.setDefaultResultOrder('ipv4first'); // Forces Node to look up IPv4 addresses before IPv6
+
 const express = require('express');
 const cors = require('cors');
-const { Pool } = require('pg'); // Only using PostgreSQL now
+const { Pool } = require('pg');
+// ... rest of your code stays exactly the same
+// const express = require('express');
 
 const app = express();
 // Render automatically provides a PORT environment variable, so we use process.env.PORT || 3000
